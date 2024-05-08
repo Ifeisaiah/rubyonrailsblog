@@ -1,0 +1,29 @@
+<% if friend.user == current_user %>
+
+<div id="<%= dom_id friend %>">
+  <p class="my-5">
+    <strong class="block mb-1 font-bold">First name:</strong>
+    <%= link_to friend.first_name + " " + friend.last_name, friend, class:"underline" %>
+
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-bold mb-1">Email:</strong>
+    <%= friend.email %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-bold mb-1">Phone:</strong>
+    <%= friend.phone %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-bold @friend = current_user.friends.buildd mb-1">Twitter:</strong>
+    <%= friend.twitter %>
+  </p>
+
+
+<hr />
+</div>
+  <% end %>
+
